@@ -1,0 +1,56 @@
+﻿<div id="edit" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" id="edit-form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="edit-modal-label">Update Customer</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-firstname" class="col-sm-2 control-label">Company name </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-companyname" name="companyname" placeholder="Company name" ng-model="vm.customerInfo.CompanyName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-contactname" class="col-sm-2 control-label">Contact Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-contactname" name="contactname" placeholder="Contact Name" ng-model="vm.customerInfo.ContactName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-address" class="col-sm-2 control-label">Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-address" name="address" placeholder="Address" ng-model="vm.customerInfo.Address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-city" class="col-sm-2 control-label">City</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-city" name="city" placeholder="City" ng-model="vm.customerInfo.City">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-country" class="col-sm-2 control-label">Country</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-country" name="country" placeholder="country" ng-model="vm.customerInfo.Country">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-phone" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit-phone" name="phone" placeholder="phone" ng-model="vm.customerInfo.Phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="vm.close()">Close</button>
+                    <button type="submit" class="btn btn-primary" ng-click="vm.updateCustomer()">Update</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

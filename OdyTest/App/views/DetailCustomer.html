@@ -1,0 +1,54 @@
+﻿
+<div id="detail" aria-labelledby="detail" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" id="edit-form">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="edit-modal-label">Customer details</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-sm-3">Company name </label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.CompanyName}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 ">Contact Name</label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.ContactName}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Address</label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.Address}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 ">City</label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.City}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Country</label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.Country}} </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Phone</label>
+                        <div class="col-sm-9">
+                            <span>{{vm.customerInfo.Phone}} </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="vm.Close()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

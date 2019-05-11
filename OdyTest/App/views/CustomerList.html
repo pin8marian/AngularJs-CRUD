@@ -1,0 +1,58 @@
+﻿
+<div class="table-responsive">
+    <a href="#/AddCustomer" class="btn btn-primary btn-xs">Add New Customer</a>
+    <br />
+    <div class="col-lg-12">
+        <span>Search: </span>
+        <input type="text" ng-model="letter" placeholder="Enter a text to filter">
+    </div>   
+    <!--<select ng-model="filedToSearch">
+        <option value="CompanyName" >Company name</option>
+        <option value="City">City</option>
+        <option value="Country">Country</option>
+        <option value="Phone">Phone</option>
+    </select>-->
+</div>
+<div class="table-responsive">
+    <span ng-show="vm.showLoading">Loading...</span>
+    <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Contact Name</th>
+                <th class="hidden-xs">Address</th>
+                <th class="hidden-xs">City</th>
+                <th class="hidden-xs">Country</th>
+                <th>Phone</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cust in vm.CustomerList | custFilter: letter | orderBy:'ContactName'">
+                <td>
+                    {{cust.CompanyName}}
+                </td>
+                <td>
+                    {{cust.ContactName}}
+                </td>
+                <td class="hidden-xs">
+                    {{cust.Address}}
+                </td>
+                <td class="hidden-xs">
+                    {{cust.City}}
+                </td>
+                <td class="hidden-xs">
+                    {{cust.Country}}
+                </td>
+                <td>
+                    {{cust.Phone}}
+                </td>
+                <td><a class="btn btn-primary btn-xs" ng-click="vm.editCustomer(cust.CustomerID)"><span class="glyphicon glyphicon-pencil">Edit</span></a></td>
+                <td><a class="btn btn-danger btn-xs" ng-click="vm.deleteCustomer(cust.CustomerID)"><span class="glyphicon glyphicon-trash">Delete</span></a></td>
+                <td><a class="btn btn-danger btn-xs" ng-click="vm.detailCustomer(cust.CustomerID)"><span class="glyphicon glyphicon-pencil">Details</span></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
